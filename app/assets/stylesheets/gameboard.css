@@ -1,0 +1,49 @@
+.board {
+    display: flex;
+    justify-content: center; /* centrar horizontalmente */
+    align-items: center; /* centrar verticalmente */
+    /* height: 100vh; */
+}
+
+.game_title {
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.card_item {
+    height: auto;
+    border-radius: 10px;
+    padding: 1px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.card_front, .card_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.card_front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.card_back {
+    transform: rotateY(180deg);
+}
+
+.card_item.flipped {
+    transform: rotateY(180deg);
+}
+
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-gap: 1em;
+    height: 40em;
+}
