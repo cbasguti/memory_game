@@ -34,7 +34,12 @@
 }
 
 .card_back {
+    border-style: outset;
+    border-radius: 10px;
     transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card_item.flipped {
